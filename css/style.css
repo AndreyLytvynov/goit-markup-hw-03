@@ -276,10 +276,14 @@ body {
 }
 
 .proects .item {
-  padding: 20px;
+  padding: 20px 24px;
   border-style: solid;
   border-color: #eeeeee;
   border-width: 0px 1px 1px 1px;
+}
+
+.item .title {
+  margin-bottom: 4px;
 }
 
 /* "Оформление кнопок" */
