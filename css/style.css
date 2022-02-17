@@ -8,6 +8,24 @@
 #2f303a - цвет фона футера и героя 
 #F5F4FA -цвет фона Teams*/
 
+/* html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+} */
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --background-page-color: #e5e5e5;
   --title-text-colore: #212121;
@@ -23,10 +41,12 @@
 .link {
   text-decoration: none;
 }
-
 /* Убираем маркеры в списках */
 .list {
   list-style-type: none;
+}
+img {
+  display: block;
 }
 
 body {
@@ -50,19 +70,46 @@ body {
   color: var(--white-text-color);
 }
 /* Шапка */
+.container.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+}
 .navigation .link.current {
   color: var(--accent-color);
 }
+.main-nav {
+  margin-left: 93px;
+}
+.navigation.list {
+  display: flex;
+}
+.navigation.list li:not(:nth-child(-n + 1)) {
+  margin-left: 50px;
+}
+/* Еще один способ выбрать все кроме первого э-та */
+/* .navigation.list li + li {
+  margin-left: 50px;
+} */
+
 .navigation .link {
+  padding: 32px 0;
+  display: block;
+
+  color: var(--title-text-colore);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--title-text-colore);
 }
 .navigation .link:focus,
 .navigation .link:hover {
   color: var(--accent-color);
+}
+
+.header-contacts.list {
+  display: flex;
+  margin-left: auto;
 }
 .header-contacts .link {
   font-weight: 500;
@@ -71,6 +118,9 @@ body {
   letter-spacing: 0.02em;
   color: var(--paragraph-text-color);
 }
+.header-contacts li:not(:nth-child(-n + 1)) {
+  margin-left: 50px;
+}
 .header-contacts .link:focus,
 .header-contacts .link:hover {
   color: var(--accent-color);
@@ -78,6 +128,10 @@ body {
 /* Футер */
 .footer {
   background-color: var(--bgc-footer);
+  padding: 60px 0;
+}
+.footer-contacts {
+  margin-top: 20px;
 }
 .footer-contacts .link {
   font-style: normal;
@@ -85,6 +139,9 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+.footer-contacts li:not(:nth-last-child(-n + 1)) {
+  margin-bottom: 9px;
 }
 .footer-contacts .home {
   color: var(--white-text-color);
@@ -97,11 +154,14 @@ body {
 /* Блок герой */
 .hero {
   background-color: var(--bgc-footer);
+  text-align: center;
+  /* padding-top: 199px;
+  padding-bottom: 201px; */
 }
 .main-title {
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.4;
+  line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -114,14 +174,31 @@ body {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 50px;
 }
 
 /* Секция наши качества*/
+.section.our-qualities {
+  padding-bottom: 0;
+}
+.header-section.qualities {
+  display: none;
+}
+.qualities.list {
+  display: flex;
+}
+.qualities.list li {
+  width: calc((100% - 90px) / 4);
+}
+.qualities.list li:not(:nth-last-child(-n + 1)) {
+  margin-right: 30px;
+}
 .qualities .title {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 .qualities .text {
   color: var(--paragraph-text-color);
@@ -130,16 +207,27 @@ body {
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
+/* Чем мы занимаемся */
 
+.list.we-doing {
+  display: flex;
+  justify-content: space-between;
+}
 /* Секция наша команда */
 .our-team {
   background-color: var(--bgc-teams);
+}
+.teams.list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
 }
 .teams .title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+  margin-top: 30px;
 }
 .teams .text {
   font-weight: normal;
@@ -147,9 +235,22 @@ body {
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--paragraph-text-color);
+  margin-top: 10px;
 }
 
 /* Страница portfolio */
+.main-title.projects {
+  display: none;
+}
+.list.nav-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.list.nav-filter li + li {
+  margin-left: 8px;
+}
+
 .proects .title {
   font-size: 18px;
   line-height: 2;
@@ -161,6 +262,24 @@ body {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--paragraph-text-color);
+}
+
+.proects.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.proects.list li:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+.proects.list li:not(:nth-child(3n + 3)) {
+  margin-right: 30px;
+}
+
+.proects .item {
+  padding: 20px;
+  border-style: solid;
+  border-color: #eeeeee;
+  border-width: 0px 1px 1px 1px;
 }
 
 /* "Оформление кнопок" */
@@ -177,6 +296,9 @@ body {
 }
 
 .order-service.button {
+  margin-top: 30px;
+  padding: 10px 32px;
+
   background-color: var(--accent-color);
   color: var(--white-text-color);
   font-weight: 700;
@@ -187,6 +309,8 @@ body {
 }
 
 .button.filter {
+  padding: 10px 22px;
+
   background-color: #f5f4fa;
   color: #212121;
   font-weight: 500;
@@ -199,4 +323,22 @@ body {
 .button.filter:focus {
   background-color: var(--accent-color);
   color: var(--white-text-color);
+}
+
+/* Офрмление блоков */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  /* outline: 1px solid red; */
+
+  /* background-color: #217bb8; */
+  /* outline: 1px solid red; */
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  /* outline: 1px solid rgb(51, 199, 63); */
 }
