@@ -1,0 +1,198 @@
+:root {
+  --background-page-color: #e5e5e5;
+  --title-text-color: #212121;
+  --paragraph-text-color: #757575;
+  --accent-color: #2196f3;
+  --black-text-color: #000000;
+  --white-text-color: #ffffff;
+  --bgc-footer: #2f303a;
+  --bgc-teams: #f5f4fa;
+}
+
+/* Убираем подчеркивание ссылок */
+.link {
+  text-decoration: none;
+}
+
+/* Убираем маркеры в списках */
+.list {
+  list-style-type: none;
+}
+
+body {
+  color: var(--title-text-color);
+  background-color: var(--white-text-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Логотип */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  color: var(--accent-color);
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+.logo .part-logo {
+  color: var(--black-text-color);
+}
+.logo .part-logo-footer {
+  color: var(--white-text-color);
+}
+
+/* Шапка */
+.navigation .link.current {
+  color: var(--accent-color);
+}
+.navigation .link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+}
+.navigation .link:focus,
+.navigation .link:hover {
+  color: var(--accent-color);
+}
+.header-contacts .link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--paragraph-text-color);
+}
+.header-contacts .link:focus,
+.header-contacts .link:hover {
+  color: var(--accent-color);
+}
+
+/* Футер */
+.footer {
+  background-color: var(--bgc-footer);
+}
+.footer-contacts .link {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-contacts .home {
+  color: var(--white-text-color);
+}
+.footer-contacts .link:focus,
+.footer-contacts .link:hover {
+  color: var(--accent-color);
+}
+
+/* Блок герой */
+.hero {
+  background-color: var(--bgc-footer);
+}
+.main-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+}
+
+/* Заголовки секций */
+.section-header {
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.section-header.is-hidden {
+  display: none;
+}
+
+/* Секция наши качества*/
+.qualities .title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.qualities .text {
+  color: var(--paragraph-text-color);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+
+/* Секция наша команда */
+.our-team {
+  background-color: var(--bgc-teams);
+}
+.teams .title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}
+.teams .text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: var(--paragraph-text-color);
+}
+
+/* Страница portfolio */
+.proects .title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.proects .text {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--paragraph-text-color);
+}
+
+/* "Оформление кнопок" */
+
+.button {
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.order-service.button {
+  background-color: var(--accent-color);
+  color: var(--white-text-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  letter-spacing: 0.06em;
+}
+
+.button.filter {
+  background-color: #f5f4fa;
+  color: #212121;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+}
+
+.button.filter:hover,
+.button.filter:focus {
+  background-color: var(--accent-color);
+  color: var(--white-text-color);
+}
+
+/* end */
