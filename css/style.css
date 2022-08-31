@@ -9,6 +9,12 @@
   --bgc-teams: #f5f4fa;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -19,6 +25,7 @@ ul {
 }
 
 img {
+  max-width: 100%;
   display: block;
 }
 
