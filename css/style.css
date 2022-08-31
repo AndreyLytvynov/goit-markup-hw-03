@@ -65,7 +65,7 @@ body {
 
 /* Контейнер */
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -161,10 +161,17 @@ body {
 
 /* Блок герой */
 .hero {
-  /* margin: 0 auto; */
+  margin: 0 auto;
   padding: 200px 0;
+  max-width: 1600px;
+
   background-color: var(--bgc-footer);
   text-align: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .main-title {
   font-weight: 900;
